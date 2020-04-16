@@ -11,25 +11,33 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class DataInitializer implements CommandLineRunner {
 
-        private DojoRepository dojoRepository;
+    private DojoRepository dojoRepository;
 
-        @Override
-        public void run(String...args) {
-            Dojo dojo1 = Dojo.builder()
-                    .description("first desc")
-                    .starterCode("first code")
-                    .solution("first solution")
-                    .title("first title")
-                    .build();
-            dojoRepository.saveAndFlush(dojo1);
+    @Override
+    public void run(String... args) {
+        Dojo dojo1 = Dojo.builder()
+                .description("Write a function that adds two numbers (a, b), and returns the sum.")
+                .starterCode("function add(a, b) {\n" +
+                        "\n" +
+                        "}\n" +
+                        "\n" +
+                        "add(5, 6);")
+                .solution("11")
+                .title("Basic calculator")
+                .build();
+        dojoRepository.saveAndFlush(dojo1);
 
-            Dojo dojo2 = Dojo.builder()
-                    .description("second desc")
-                    .starterCode("second code")
-                    .solution("second solution")
-                    .title("second title")
-                    .build();
+        Dojo dojo2 = Dojo.builder()
+                .description("Complete the method that takes a boolean value and return a \"Yes\" string for true, or a \"No\" string for false.")
+                .starterCode("function boolToWord( bool ){\n" +
+                        "  \n" +
+                        "}\n" +
+                        "\n" +
+                        "boolToWord(true);")
+                .solution("yes")
+                .title("Boolean to Human")
+                .build();
 
-            dojoRepository.saveAndFlush(dojo2);
-        }
+        dojoRepository.saveAndFlush(dojo2);
+    }
 }
