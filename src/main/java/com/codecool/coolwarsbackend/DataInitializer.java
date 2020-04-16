@@ -19,6 +19,7 @@ public class DataInitializer implements CommandLineRunner {
                     .description("first desc")
                     .starterCode("first code")
                     .solution("first solution")
+                    .title("first title")
                     .build();
             dojoRepository.saveAndFlush(dojo1);
 
@@ -26,6 +27,7 @@ public class DataInitializer implements CommandLineRunner {
                     .description("second desc")
                     .starterCode("second code")
                     .solution("second solution")
+                    .title("second title")
                     .build();
 
             dojoRepository.saveAndFlush(dojo2);

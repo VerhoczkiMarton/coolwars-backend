@@ -19,6 +19,7 @@ public class Dojo {
     @GeneratedValue
     Long id;
 
+    String title;
     String description;
     String starterCode;
     String solution;
