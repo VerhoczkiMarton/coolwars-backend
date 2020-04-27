@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Component
 @AllArgsConstructor
@@ -16,4 +18,14 @@ public class DojoService {
     public List<Dojo> getDojos() {
         return dojoRepository.findAll();
     }
+
+    public Dojo getDojoById(Long id) {
+        Optional<Dojo> dojo = dojoRepository.findById(id);
+        if (dojo.isPresent()) {
+            return dojo.get();
+        } else {
+            throw new NoSuchElementException();
+        }
+    }
 }
+
