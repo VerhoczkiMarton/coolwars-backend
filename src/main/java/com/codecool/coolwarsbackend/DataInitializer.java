@@ -33,7 +33,7 @@ public class DataInitializer implements CommandLineRunner {
                         "    return None\n" +
                         "\n" +
                         "print(boolToWord(False))")
-                .solution("yes")
+                .solution("no")
                 .title("Boolean to Human")
                 .build();
 
