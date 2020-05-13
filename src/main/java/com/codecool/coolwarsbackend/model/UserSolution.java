@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class UserSolution {
-    Long dojoId;
-    String solution;
+    private Long dojoId;
+    private String code;
+    private Language language;
 }
