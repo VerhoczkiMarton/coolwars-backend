@@ -1,6 +1,7 @@
 package com.codecool.coolwarsbackend.controller;
 
 import com.codecool.coolwarsbackend.model.UserSolution;
+import com.codecool.coolwarsbackend.model.ValidityResponse;
 import com.codecool.coolwarsbackend.service.VerificationService;
 import lombok.AllArgsConstructor;
 import org.json.JSONException;
@@ -14,7 +15,7 @@ public class VerificationController {
     VerificationService verificationService;
 
     @PostMapping
-    boolean verify(@RequestBody UserSolution userSolution) throws JSONException {
+    ValidityResponse verify(@RequestBody UserSolution userSolution) throws JSONException {
         return verificationService.verifyUserSolution(userSolution);
     }
 }
