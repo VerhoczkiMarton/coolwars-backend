@@ -17,10 +17,12 @@ public class VerificationService {
     CompilerService compilerService;
 
     public boolean verifyUserSolution(UserSolution userSolution) throws JSONException {
-        Optional<Dojo> correctSolution = dojoRepository.findById(userSolution.getDojoId());
-        if (correctSolution.isPresent()) {
+        Optional<Dojo> correctSolutionOptional = dojoRepository.findById(userSolution.getDojoId());
+        if (correctSolutionOptional.isPresent()) {
+            Dojo correctSolution = correctSolutionOptional.get();
+            userSolution.setCode(userSolution.getCode() + correctSolution.getRunnerCode());
             String userCodeOutput = compilerService.get_output(userSolution);
-            return userCodeOutput.strip().equalsIgnoreCase(correctSolution.get().getSolution());
+            return userCodeOutput.strip().equalsIgnoreCase(correctSolutionOptional.get().getSolution());
         } else {
             throw new NoSuchElementException("Dojo not found");
         }

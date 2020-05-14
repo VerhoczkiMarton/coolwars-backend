@@ -20,6 +20,7 @@ public class Dojo {
     String title;
     String description;
     String starterCode;
+    String runnerCode;
     String solution;
     @Enumerated(EnumType.STRING)
     Language language;

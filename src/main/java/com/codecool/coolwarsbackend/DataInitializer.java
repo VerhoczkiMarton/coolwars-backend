@@ -19,8 +19,8 @@ public class DataInitializer implements CommandLineRunner {
                 .language(Language.PYTHON)
                 .description("Write a function that adds two numbers (a, b), and returns the sum.")
                 .starterCode("def add(a, b):\n" +
-                        "   \n" +
-                        "print(add(5,6))")
+                        "   \n")
+                .runnerCode("\nprint(add(5,6))")
                 .solution("11")
                 .title("Basic calculator")
                 .build();
@@ -30,9 +30,8 @@ public class DataInitializer implements CommandLineRunner {
                 .language(Language.PYTHON)
                 .description("Complete the method that takes a boolean value and return a \"Yes\" string for true, or a \"No\" string for false.")
                 .starterCode("def boolToWord(bool):\n" +
-                        "    return None\n" +
-                        "\n" +
-                        "print(boolToWord(False))")
+                        "    return None\n")
+                .runnerCode("\nprint(boolToWord(False))")
                 .solution("no")
                 .title("Boolean to Human")
                 .build();
