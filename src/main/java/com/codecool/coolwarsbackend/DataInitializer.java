@@ -136,5 +136,48 @@ public class DataInitializer implements CommandLineRunner {
                 .solution("3")
                 .build();
         dojoRepository.saveAndFlush(dojo9);
+        Dojo dojo10 = Dojo.builder()
+                .language(Language.JAVA)
+                .title("Basic Calculator - Java")
+                .description("<p>Write a function that adds two numbers <code>(a, b)</code>, and returns the sum.</p>")
+                .starterCode("class Main {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        Test.test();\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    public static int add(int a, int b) {\n" +
+                        "        Your code\n" +
+                        "    }\n" +
+                        "}")
+                .runnerCode("class Test {\n" +
+                        "    public static void test() {\n" +
+                        "        System.out.println(Main.add(5,6));\n" +
+                        "    }\n" +
+                        "}")
+                .solution("11")
+                .build();
+        dojoRepository.saveAndFlush(dojo10);
+
+        Dojo dojo11 = Dojo.builder()
+                .language(Language.JAVA)
+                .title("Boolean to Human - Java")
+                .description("<p>Complete the method that takes a boolean value and return a <code>\"Yes\"</code> string for true, or a <code>\"No\"</code> string for <code>false</code>.</p>")
+                .starterCode("class Main {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        Test.test();\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    public static String boolToWord(boolean bool) {\n" +
+                        "        Your code\n" +
+                        "    }\n" +
+                        "}")
+                .runnerCode("\nclass Test {\n" +
+                        "    public static void test() {\n" +
+                        "        System.out.println(Main.boolToWord(false));\n" +
+                        "    }\n" +
+                        "}")
+                .solution("no")
+                .build();
+        dojoRepository.saveAndFlush(dojo11);
     }
 }
