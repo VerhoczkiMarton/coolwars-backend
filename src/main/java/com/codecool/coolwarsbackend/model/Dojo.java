@@ -18,6 +18,7 @@ public class Dojo {
     Long id;
 
     String title;
+    @Column(columnDefinition = "LONGTEXT")
     String description;
     String starterCode;
     String runnerCode;
