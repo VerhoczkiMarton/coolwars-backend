@@ -178,7 +178,7 @@ public class DataInitializer implements CommandLineRunner {
                 .title(templates.get(9).get(title))
                 .description(templates.get(9).get(description))
                 .starterCode(getPythonStarterCode("sherlock_and_anagrams(s)"))
-                .runnerCode("\nprint(sherlock_and_anagrams(\"ifailuhkqq\")")
+                .runnerCode("\nprint(sherlock_and_anagrams(\"ifailuhkqq\"))")
                 .solution("3")
                 .build();
         dojoRepository.saveAndFlush(python9);
@@ -189,8 +189,8 @@ public class DataInitializer implements CommandLineRunner {
                 .language(Language.PYTHON)
                 .title(templates.get(10).get(title))
                 .description(templates.get(10).get(description))
-                .starterCode(getPythonStarterCode("maxRegion(grid)"))
-                .runnerCode("\nprint(maxRegion([[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 0], [1, 0, 0, 0]])")
+                .starterCode(getPythonStarterCode("max_region(grid)"))
+                .runnerCode("\nprint(max_region([[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 0], [1, 0, 0, 0]]))")
                 .solution("3")
                 .build();
         dojoRepository.saveAndFlush(python10);
@@ -299,7 +299,7 @@ public class DataInitializer implements CommandLineRunner {
 
     private String getPythonStarterCode(String sig) {
         return "def " + sig + ":\n" +
-                "\t# Your code\"";
+                "\t# Your code";
     }
 
     private String getJavaStarterCode(String sig) {
