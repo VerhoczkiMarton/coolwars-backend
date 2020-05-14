@@ -270,7 +270,7 @@ public class DataInitializer implements CommandLineRunner {
                 .language(Language.JAVA)
                 .title(templates.get(8).get(title))
                 .description(templates.get(8).get(description))
-                .starterCode("import java.util.Arrays;" + getJavaStarterCode("int[] rotLeft(int[] a, int d)"))
+                .starterCode(getJavaStarterCode("int[] rotLeft(int[] a, int d)"))
                 .runnerCode(getJavaRunnerCode("java.util.Arrays.toString(Main.rotLeft(new int[] { 1, 2, 3, 4, 5 }, 4))"))
                 .solution("[5, 1, 2, 3, 4]")
                 .build();
